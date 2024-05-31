@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Basic Pay Button</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1L Beer</td>
+                <td>0.25 SIO</td>
+                <td>
+                    <pay-button price="0.25" to="5CqMvfkELCeUGcd1rbUT3oyuZETWyUdCVLXUFxQp9VHL7Gof" note="1L Beer" completed="onPaymentCompleted(event)">
+                        Buy 1L Beer
+                    </pay-button>
+                </td>
+            </tr>
+            <tr>
+                <td>1L Water</td>
+                <td>0.10 SIO</td>
+                <td>
+                    <pay-button price="0.10" to="5CqMvfkELCeUGcd1rbUT3oyuZETWyUdCVLXUFxQp9VHL7Gof" note="1L Water" completed="onPaymentCompleted(event)">
+                        Buy 1L Water
+                    </pay-button>
+                </td>
+            </tr>
+            <tr>
+                <td>1L Juice</td>
+                <td>0.50 SIO</td>
+                <td>
+                    <pay-button price="0.50" to="5CqMvfkELCeUGcd1rbUT3oyuZETWyUdCVLXUFxQp9VHL7Gof" note="1L Juice" completed="onPaymentCompleted(event)">
+                        Buy 1L Juice
+                    </pay-button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="/dist/index.js"></script>
+    <script>
+        window.onPaymentCompleted = function (event) {
+            console.log('Payment completed', event);
+        }
+    </script>
+</body>
+
+</html>
